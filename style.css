@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities{
+    .tag{
+        @apply border border-[#F44335] px-4 py-2 rounded-full hover:text-white hover:bg-[#F44335] transition-all duration-300 cursor-pointer mb-4 items-center text-center ;
+    }
+
+    .list{
+        @apply text-[#20484F] hover:text-[#F44335] transition-all duration-300 cursor-pointer;
+    }
+}

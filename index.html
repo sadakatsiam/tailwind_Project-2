@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en" class="dark" id="htmlTag">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+        body{
+    font-family: "Plus Jakarta Sans", sans-serif;
+    }
+    </style>
+</head>
+<body class="bg-[#FAFAFA] dark:bg-gray-900 dark:text-white">
+    <!--Header section-->
+    <header class=" md:fixed w-full md:py-2 py-2 px-2  bg-white dark:bg-gray-900 dark:text-white">
+        <nav class="flex items-center justify-between container mx-auto">
+            <div>
+                <img src="images/logo.png" alt="logo" class="w-36 md:w-fit cursor-pointer dark:bg-gray-900 dark:text-white">
+            </div>
+            <div class="nav-links bg-white dark:bg-gray-900 dark:text-white min-h-[60vh] md:w-auto w-full items-center px-5 md:static absolute align-middle left-0 top-[-100%] md:min-h-fit">
+                <ul class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8">
+                    <li class="hover:border-b hover:border-solid hover:border-b-[#F44335] cursor-pointer transition duration-300 text-lg font-medium">Home</li>
+                    <li class="hover:border-b hover:border-b-[#F44335] cursor-pointer transition duration-300 text-lg font-medium">About Us</li>
+                    <li class="hover:border-b hover:border-b-[#F44335] cursor-pointer transition duration-300 text-[#F44335] text-lg font-medium">Upskill</li>
+                    <li class="hover:border-b hover:border-b-[#F44335] cursor-pointer transition duration-300 text-lg font-medium">Contact us </li>
+                </ul>
+            </div>
+            <div class="flex items-center gap-3">
+                <button class="bg-[#F44335] text-sm md:text-base py-3 md:py-3 px-3 md:px-6 rounded-md text-white  hover:bg-[#f5f3f3] hover:text-[#F44335] hover:outline-[#F44335] hover:outline transition hover:scale-105">Register Interest</button>
+                <button id="switch" class="dark:text-white flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 hover:scale-105 transition duration-300 hover:text-[#F44335] cursor-pointer">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z" />
+                      </svg>  
+                      <ion-icon name="menu-outline" class="cursor-pointer size-9 md:hidden" onclick="Menu(this)"></ion-icon>
+                                          
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!--Hero section-->
+    <section class=" w-full  bg-[#FAFAFA] dark:bg-gray-900 dark:text-white">
+        <div class="container grid-cols-12 grid mx-auto mb-8 gap-8 px-4 md:px-0 pt-10 pb-10">
+            <div class="md:col-span-6 col-span-12 space-y-8">
+                <h3 class="text-lg">Discover <span>-</span> Interact <span>-</span> Engage </h3>
+                <h1 class="text-6xl font-semibold leading-tight">Google <br> 
+                    <span class="text-[#F44335] border-b-[#F44335] border-b-4">IT Support <br></span> Certificate</h1>
+                    <p class="text-lg">This is your path to a career in IT. In this program, you’ll learn in-demand <br>skills with no degree or experience required. </p>
+                    <div class="flex items-center md:gap-12 gap-6 md:text-lg text-center text-sm font-base">
+                        <h3 class="text-[#2D3142] dark:text-white"><span class="text-[#00FF84] font-semibold text-xl">438</span><br>Videos</h3>
+                        <h3 class="text-[#2D3142] dark:text-white"><span class="text-[#00FF84] font-semibold text-xl">151</span><br>Readings</h3>
+                        <h3 class="text-[#2D3142] dark:text-white"><span class="text-[#00FF84] font-semibold text-xl">108</span><br>Quizzes</h3>
+                        <h3 class="text-[#2D3142] dark:text-white"><span class="text-[#00FF84] font-semibold text-xl">24</span><br>Exercises</h3>
+                        <h3 class="text-[#2D3142] dark:text-white"><span class="text-[#00FF84] font-semibold text-xl">4</span><br>Assigments</h3>
+                    </div>
+                    <div class="flex md:gap-6 gap-8 mt-4">
+                        <button class="bg-[#F44335] text-lg px-4 py-2 rounded text-white hover:bg-[#f5f3f3] hover:text-[#F44335] hover:outline-[#F44335] hover:outline transition hover:scale-105">Sign up</button>
+                        <button class="bg-[#FFFFFF] dark:text-black text-lg px-4 py-2 rounded border hover:bg-[#f5f3f3] hover:text-[#141414] hover:outline-[#F44335] hover:outline transition hover:scale-105">Learn more</button>
+                    </div>
+            </div>
+            <div class="md:col-span-6 col-span-12 mt-14">
+                <img src="images/Group 1964.png" alt="">
+            </div>
+        </div>
+    </section>
+
+
+    <!--Logo section-->
+    <section class="w-full h-fit  bg-white py-4 dark:bg-gray-900 dark:text-white">
+        <div class="container items-center align-middle justify-around flex mx-auto">
+            <div class=" border-e pe-6 py-6">
+                Pave your path to career success by <br> gaining  a  professional  Google <br> certificate with the support of C4U 
+            </div>
+            <div class="border-e me-6">
+                <img src="images/Google.png" alt="">
+            </div>
+            <div class="border-e me-6">
+                <img src="images/Work & Pensions.png" alt="">
+            </div>
+            <div>
+                <img src="images/logo.png" alt="">
+            </div>
+        </div>
+    </section>
+
+
+        <!--Learn section-->
+
+         <section class=" grid grid-cols-12 container mx-auto pt-8  gap-10">
+                <div class="md:col-span-6 col-span-12 w-full container shadow-lg md:p-6 p-4 bg-white dark:bg-gray-900 dark:text-white mt-4">
+                    <div class="border-b border-solid border-[#F9CCC7] mb-12">
+                        <h3 class="text-lg md:text-2xl font-semibold pb-4">What you will learn</h3>
+                    </div>
+                    <div class="">
+                        <div class="flex items-center gap-4 mb-6">
+                            <button class="bg-[#F9CCC7] text-[#F44335] px-5 py-3 text-xl rounded-full">✔</button>
+                            <p>Gain skills required to succeed in an entry-level IT job</p>
+                        </div>
+                        <div class="flex items-center gap-4 mb-6">
+                            <button class="bg-[#F9CCC7] text-[#F44335] px-5 py-3 text-xl rounded-full">✔</button>
+                            <p> Learn to perform day-to-day IT support tasks including computer assembly, wireless networking, installing programs, and customer service</p>
+                        </div>
+                        <div class="flex items-center gap-4 mb-6">
+                            <button class="bg-[#F9CCC7] text-[#F44335] px-5 py-3 text-xl rounded-full">✔</button>
+                            <p>Learn how to provide end-to-end customer support, ranging from identifying problems to troubleshooting and debugging</p>
+                        </div>
+                        <div class="flex items-center gap-4 mb-6">
+                            <button class="bg-[#F9CCC7] text-[#F44335] px-5 py-3 text-xl rounded-full">✔</button>
+                            <p>Learn to use systems including Linux, Domain Name Systems, Command-Line Interface, and Binary Code</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:col-span-6 col-span-12 w-full h-auto shadow-lg md:p-6 p-4 mt-4 bg-white dark:bg-gray-900 dark:text-white">
+                    <div>
+                        <div class="border-b border-solid border-[#F9CCC7] md:pb-2.5 pb-1  ">
+                            <img src="images/IT_social 1.png" alt="" class="object-cover">
+                            <h3 class="text-lg md:text-2xl font-semibold">Skills you will gain </h3>
+                        </div>
+                    </div>
+                    <div class="justify-between h-auto space-y-4 gap-4  mt-4 md:mt-8 md:px-6 px-3 items-center ">
+                        <div class="space-x-6 container grid md:flex">
+                            <button class="tag ">Debugging</button>
+                            <button class="tag ">Customer Service</button>
+                            <button class="tag ">Customer Support</button>
+                        </div>
+                        <div class="space-x-6 container grid md:flex">
+                            <button class="tag ">Domain Name System (DNS)</button>
+                            <button class="tag ">Network Model</button>
+                            <button class="tag ">Linux</button>
+                        </div>
+                        <div class="space-x-6 container grid md:flex">
+                            <button class="tag ">Encryption Algorithms and Techniques</button>
+                            <button class="tag ">Network Protocols</button>
+                        </div>
+                        <div class="space-x-6 container grid md:flex">
+                            <button class="tag">Ipv4</button>
+                            <button class="tag ">Troubleshooting</button>
+                            <span class="tag ">Binary Code</span>
+                            <button class="tag">Cloud Computing</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+
+        <!--Certificate section-->
+
+            <section class=" grid grid-cols-12 container mx-auto pt-8  gap-10 mt-12 ">
+                <div class="md:col-span-6 col-span-12 w-auto  shadow-lg md:p-6 p-4 ">
+                    <div class="border-b border-solid border-[#F9CCC7] mb-12">
+                        <h3 class="text-lg md:text-2xl font-semibold pb-4">Jobs Assocaited with Certificate </h3>
+                    </div>
+                    <div class="grid-cols-12 container w-auto flex flex-row gap-40">
+                        <div class="md:col-span-6 space-y-6">
+                            <div class="flex items-center gap-4">
+                                <img src="images/Checkmark.png" alt="">
+                                <p>Database administrator</p>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <img src="images/Checkmark.png" alt="">
+                                <p>Database administrator</p>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <img src="images/Checkmark.png" alt="">
+                                <p>Database administrator</p>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <img src="images/Checkmark.png" alt="">
+                                <p>Database administrator</p>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <img src="images/Checkmark.png" alt="">
+                                <p>Database administrator</p>
+                            </div>
+                        </div>
+                        <div class="md:col-span-6 space-y-6 me-4 md:me-8">
+                            <div class="flex items-center gap-4">
+                                <img src="images/Checkmark.png" alt="">
+                                <p>Database administrator</p>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <img src="images/Checkmark.png" alt="">
+                                <p>Database administrator</p>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <img src="images/Checkmark.png" alt="">
+                                <p>Database administrator</p>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <img src="images/Checkmark.png" alt="">
+                                <p>Database administrator</p>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <img src="images/Checkmark.png" alt="">
+                                <p>Database administrator</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                    <img src="images/IT Support 1.png" alt="" class="shadow-lg md:col-span-6 col-span-12">  
+            </section>
+
+
+            <section class="grid grid-cols-12 py-24  w-full h-full  mt-10 bg-white dark:bg-gray-900 dark:text-white bg-[url('images/Group.png')] object-cover bg-no-repeat" style="background-position: 1400px -30px;">
+                <div class="container grid col-span-6 md:col-span-12  mx-auto" >
+                    <h1 class="text-5xl font-semibold">There are 5 Courses in this <br> Professional Certificate</h1>
+                    <div class="md:flex grid md:ml-0 ml-24 gap-6 mt-6 border-b border-[#F9CCC7]">
+                        <button class="border border-black bg-[#01ff84] px-10 py-2 rounded-full hover:text-white hover:bg-[#F44335] transition-all duration-300 cursor-pointer mb-4">Course  1 </button>
+                        <button class="border border-black  px-10 py-2 rounded-full hover:bg-[#01ff84] transition-all duration-300 cursor-pointer mb-4">Course  2 </button>
+                        <button class="border border-black  px-10 py-2 rounded-full hover:bg-[#01ff84] transition-all duration-300 cursor-pointer mb-4">Course  3 </button>
+                        <button class="border border-black  px-10 py-2 rounded-full hover:bg-[#01ff84] transition-all duration-300 cursor-pointer mb-4">Course  4 </button>
+                        <button class="border border-black  px-10 py-2 rounded-full hover:bg-[#01ff84] transition-all duration-300 cursor-pointer mb-4">Course  5 </button>
+                    </div>
+                </div>
+
+            </section>
+
+         <!--Course 1  section-->
+
+
+
+    <section class="grid grid-cols-12 container mx-auto mt-24 shadow-lg">
+        <div class="col-span-12 md:col-span-3 bg-[#2D3142] text-white px-12">
+            <p class="text-[#00FF84] mt-8">Course 1 </p> <br>
+            <h2 class="text-4xl font-semibold">Technical Support Fundamentals</h2><br><br>
+            <div class="flex justify-between">
+                <p class="text-[#00FF84]">132,411 ratings</p>
+                <p class="text-[#FFCB45]">★★★★★ 4.8</p>
+            </div><br><br>
+            <div class="flex justify-between">
+                <button class="px-6 py-3 rounded bg-[#F44335] ">Sign Up</button>
+                <button class="px-6 py-3 rounded bg-white text-black">Next</button>
+            </div> <br><br><br>
+            <p class="text-sm pb-6 bottom-0 md:bottom-[-50%] relative">When you complete all of the courses in the program, you'll earn a Certificate to share with your professional network as well as unlock access to career support resources to help you kickstart your new career. </p>
+        </div>
+        <div class="col-span-12 md:col-span-9 bg-white text-black px-12 dark:bg-gray-900 dark:text-white">
+            <h3 class="mt-8 text-xl text-[#F9CCC7] font-semibold">About this course</h3><br>
+            <p>This course is the first of a series that aims to prepare you for a role as an entry-level IT Support Specialist. In this course, you’ll be introduced to the world of Information Technology, or IT. You’ll learn about the different facets of Information Technology, like computer hardware, the Internet, computer software, troubleshooting, and customer service. This course covers a wide variety of topics in IT that are designed to give you an overview of what’s to come in this certificate program.</p> <br><br>
+            <h3 class="text-xl text-[#F9CCC7] font-semibold">What you will learn </h3><br>
+            <div class="flex items-center gap-4">
+                <button class="bg-[#F9CCC7] text-[#F44335] px-5 py-3 text-xl rounded-full">✔</button>
+                <p>Understand how the binary system works</p>
+            </div><br>
+            <div class="flex items-center gap-4">
+                <button class="bg-[#F9CCC7] text-[#F44335] px-5 py-3 text-xl rounded-full">✔</button>
+                <p>Learn how applications are created and how they work under the hood of a computer</p>
+            </div><br>
+            <div class="flex items-center gap-4">
+                <button class="bg-[#F9CCC7] text-[#F44335] px-5 py-3 text-xl rounded-full">✔</button>
+                <p>Utilize common problem-solving methodologies and soft skills in an Information Technology setting</p>
+            </div><br>
+            <div class="flex items-center gap-4">
+                <button class="bg-[#F9CCC7] text-[#F44335] px-5 py-3 text-xl rounded-full">✔</button>
+                <p>Assemble a computer from scratch</p>
+            </div><br>
+            <div class="flex items-center gap-4">
+                <button class="bg-[#F9CCC7] text-[#F44335] px-5 py-3 text-xl rounded-full">✔</button>
+                <p>Choose and install an operating system on a computer</p>
+            </div><br>
+            <div class="flex items-center gap-4">
+                <button class="bg-[#F9CCC7] text-[#F44335] px-5 py-3 text-xl rounded-full">✔</button>
+                <p>Understand what the Internet is, how it works, and the impact it has in the modern world</p>
+            </div><br><br>
+            <h3 class="mt-8 text-xl text-[#F9CCC7] font-semibold">Skills you will gain </h3><br>
+            <div class=" grid md:flex gap-6">
+                <button class="px-6 py-3 border border-[#F44335] rounded-full hover:bg-[#F44335] hover:text-white transition duration-300">Binary Code</button>
+                <button class="px-6 py-3 border border-[#F44335] rounded-full hover:bg-[#F44335] hover:text-white transition duration-300">Troubleshooting</button>
+                <button class="px-6 py-3 border border-[#F44335] rounded-full hover:bg-[#F44335] hover:text-white transition duration-300">Customer Support</button>
+                <button class="px-6 py-3 border border-[#F44335] rounded-full hover:bg-[#F44335] hover:text-white transition duration-300">Linux</button>
+            </div><br><br>
+            <h3 class="mt-8 text-xl text-[#F9CCC7] font-semibold">Information </h3><br>
+            <div>
+                <ul class="list-disc pb-6">
+                    <li><p class="ms-4">Flexible deadlines</p></li>
+                    <li><p class="ms-4">Shareable Certificate </p></li>
+                    <li><p class="ms-4">100% online</p></li>
+                    <li><p class="ms-4">Beginner Level</p></li>
+                    <li><p class="ms-4">Approx. 20 hours to complete</p></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+
+    <div class="container  grid-cols-12 mx-auto">
+        <img src="images/Connector Vector (3).png" alt="" class=" object-fill w-96 md:w-auto mt-[-10%] ml-14 md:ms-48 container">
+    </div>
+
+             <!--Course 2  section-->
+
+
+
+             <section class="grid grid-cols-12 container mx-auto mt-6 shadow-lg">
+                <div class="col-span-12 md:col-span-3 bg-[#2D3142] text-white px-12">
+                    <p class="text-[#00FF84] mt-8">Course 2 </p> <br>
+                    <h2 class="text-4xl font-semibold">The Bits and Bytes of Computer Networking</h2><br><br>
+                    <div class="flex justify-between">
+                        <p class="text-[#00FF84]">37,998 ratings</p>
+                        <p class="text-[#FFCB45]">★★★★★ 4.7</p>
+                    </div><br><br>
+                    <div class="flex justify-between">
+                        <button class="px-6 py-3 rounded bg-[#F44335] ">Sign Up</button>
+                        <button class="px-6 py-3 rounded bg-white text-black">Next</button>
+                    </div> <br><br><br>
+                    <p class="text-sm pb-6 bottom-0 md:bottom-[-40%] relative">When you complete all of the courses in the program, you'll earn a Certificate to share with your professional network as well as unlock access to career support resources to help you kickstart your new career. </p>
+                </div>
+                <div class="col-span-12 md:col-span-9 bg-white text-black px-12 dark:bg-gray-900 dark:text-white">
+                    <h3 class="mt-8 text-xl text-[#F9CCC7] font-semibold">About this course</h3><br>
+                    <p>This course is designed to provide a full overview of computer networking. We’ll cover everything from the fundamentals of modern networking technologies and protocols to an overview of the cloud to practical applications and network troubleshooting.</h3><br><br><br>
+                    <h3 class="text-xl text-[#F9CCC7] font-semibold">What you will learn </h3><br>
+                    <div class="flex items-center gap-4">
+                        <button class="bg-[#F9CCC7] text-[#F44335] px-5 py-3 text-xl rounded-full">✔</button>
+                        <p>Describe computer networks in terms of a five-layer mode</p>
+                    </div><br>
+                    <div class="flex items-center gap-4">
+                        <button class="bg-[#F9CCC7] text-[#F44335] px-5 py-3 text-xl rounded-full">✔</button>
+                        <p>Understand all of the standard protocols involved with TCP/IP communications</p>
+                    </div><br>
+                    <div class="flex items-center gap-4">
+                        <button class="bg-[#F9CCC7] text-[#F44335] px-5 py-3 text-xl rounded-full">✔</button>
+                        <p>Grasp powerful network troubleshooting tools and techniques</p>
+                    </div><br>
+                    <div class="flex items-center gap-4">
+                        <button class="bg-[#F9CCC7] text-[#F44335] px-5 py-3 text-xl rounded-full">✔</button>
+                        <p>learn network services like DNS and DHCP that help make computer networks run</p>
+                    </div><br>
+                    <div class="flex items-center gap-4">
+                        <button class="bg-[#F9CCC7] text-[#F44335] px-5 py-3 text-xl rounded-full">✔</button>
+                        <p>Understand cloud computing, everything as a service, and cloud storage</p>
+                    </div><br><br>
+                    <h3 class="mt-8 text-xl text-[#F9CCC7] font-semibold">Skills you will gain </h3><br>
+                    <div class=" grid md:flex gap-6">
+                        <button class="px-6 py-3 border border-[#F44335] rounded-full hover:bg-[#F44335] hover:text-white transition duration-300">Domain Name System (DNS)</button>
+                        <button class="px-6 py-3 border border-[#F44335] rounded-full hover:bg-[#F44335] hover:text-white transition duration-300">Ipv4</button>
+                        <button class="px-6 py-3 border border-[#F44335] rounded-full hover:bg-[#F44335] hover:text-white transition duration-300">Network Model</button>
+                        <button class="px-6 py-3 border border-[#F44335] rounded-full hover:bg-[#F44335] hover:text-white transition duration-300">Troubleshooting</button>
+                    </div><br><br>
+                    <h3 class="mt-8 text-xl text-[#F9CCC7] font-semibold">Information </h3><br>
+                    <div>
+                        <ul class="list-disc pb-6">
+                            <li><p class="ms-4">Flexible deadlines</p></li>
+                            <li><p class="ms-4">Shareable Certificate </p></li>
+                            <li><p class="ms-4">100% online</p></li>
+                            <li><p class="ms-4">Beginner Level</p></li>
+                            <li><p class="ms-4">Approx. 25 hours to complete</p></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+
+            <div class="container  grid-cols-12 mx-auto">
+                <img src="images/Connector Vector (1).png" alt="" class=" object-fill w-96 md:w-auto md:ms-48 container">
+            </div>
+
+
+                         <!--Course 3  section-->
+
+
+
+                         <section class="grid grid-cols-12 container mx-auto mt-6 shadow-lg">
+                            <div class="col-span-12 md:col-span-3 bg-[#2D3142] text-white px-12">
+                                <p class="text-[#00FF84] mt-8">Course 3 </p> <br>
+                                <h2 class="text-4xl font-semibold">Operating Systems and You: Becoming a Power User</h2><br><br>
+                                <div class="flex justify-between">
+                                    <p class="text-[#00FF84]">22,045 ratings</p>
+                                    <p class="text-[#FFCB45]">★★★★★ 4.7</p>
+                                </div><br><br>
+                                <div class="flex justify-between">
+                                    <button class="px-6 py-3 rounded bg-[#F44335] ">Sign Up</button>
+                                    <button class="px-6 py-3 rounded bg-white text-black">Next</button>
+                                </div> <br><br><br>
+                                <p class="text-sm pb-6 bottom-0 md:bottom-[-45%] relative">When you complete all of the courses in the program, you'll earn a Certificate to share with your professional network as well as unlock access to career support resources to help you kickstart your new career. </p>
+                            </div>
+                            <div class="col-span-12 md:col-span-9 bg-white text-black px-12 dark:bg-gray-900 dark:text-white">
+                                <h3 class="mt-8 text-xl text-[#F9CCC7] font-semibold">About this course</h3><br>
+                                <p>In this course -- through a combination of video lectures, demonstrations, and hands-on practice -- you’ll learn about the main components of an operating system and how to perform critical tasks like managing software and users, and configuring hardware.</h3><br><br><br>
+                                <h3 class="text-xl text-[#F9CCC7] font-semibold">What you will learn </h3><br>
+                                <div class="flex items-center gap-4">
+                                    <button class="bg-[#F9CCC7] text-[#F44335] px-5 py-3 text-xl rounded-full">✔</button>
+                                    <p>Navigate the Windows and Linux filesystems using a graphical user interface and command line interpreter</p>
+                                </div><br>
+                                <div class="flex items-center gap-4">
+                                    <button class="bg-[#F9CCC7] text-[#F44335] px-5 py-3 text-xl rounded-full">✔</button>
+                                    <p>Set up users, groups, and permissions for account access</p>
+                                </div><br>
+                                <div class="flex items-center gap-4">
+                                    <button class="bg-[#F9CCC7] text-[#F44335] px-5 py-3 text-xl rounded-full">✔</button>
+                                    <p>Install, configure, and remove software on the Windows and Linux operating systems</p>
+                                </div><br>
+                                <div class="flex items-center gap-4">
+                                    <button class="bg-[#F9CCC7] text-[#F44335] px-5 py-3 text-xl rounded-full">✔</button>
+                                    <p>Configure disk partitions and filesystems</p>
+                                </div><br>
+                                <div class="flex items-center gap-4">
+                                    <button class="bg-[#F9CCC7] text-[#F44335] px-5 py-3 text-xl rounded-full">✔</button>
+                                    <p>work with system logs and remote connection tools</p>
+                                </div><br>
+                                <div class="flex items-center gap-4">
+                                    <button class="bg-[#F9CCC7] text-[#F44335] px-5 py-3 text-xl rounded-full">✔</button>
+                                    <p>work with system logs and remote connection tools</p>
+                                </div><br><br>
+                                <h3 class="mt-8 text-xl text-[#F9CCC7] font-semibold">Skills you will gain </h3><br>
+                                <div class=" grid md:flex gap-6">
+                                    <button class="px-6 py-3 border border-[#F44335] rounded-full hover:bg-[#F44335] hover:text-white transition duration-300">Powershell</button>
+                                    <button class="px-6 py-3 border border-[#F44335] rounded-full hover:bg-[#F44335] hover:text-white transition duration-300">Linux File Systems</button>
+                                    <button class="px-6 py-3 border border-[#F44335] rounded-full hover:bg-[#F44335] hover:text-white transition duration-300">Command-Line Interface</button>
+                                    <button class="px-6 py-3 border border-[#F44335] rounded-full hover:bg-[#F44335] hover:text-white transition duration-300">Linux</button>
+                                </div><br><br>
+                                <h3 class="mt-8 text-xl text-[#F9CCC7] font-semibold">Information </h3><br>
+                                <div>
+                                    <ul class="list-disc pb-6">
+                                        <li><p class="ms-4">Flexible deadlines</p></li>
+                                        <li><p class="ms-4">Shareable Certificate </p></li>
+                                        <li><p class="ms-4">100% online</p></li>
+                                        <li><p class="ms-4">Beginner Level</p></li>
+                                        <li><p class="ms-4">Approx. 25 hours to complete</p></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>
+            
+            
+                        <div class="container  grid-cols-12 mx-auto">
+                            <img src="images/Connector Vector (2).png" alt="" class=" object-fill w-96 md:w-auto md:ms-48 container">
+                        </div>
+
+
+                                     <!--Course 4  section-->
+
+
+
+             <section class="grid grid-cols-12 container mx-auto mt-6 shadow-lg">
+                <div class="col-span-12 md:col-span-3 bg-[#2D3142] text-white px-12">
+                    <p class="text-[#00FF84] mt-8">Course 4 </p> <br>
+                    <h2 class="text-4xl font-semibold">System Administration and IT Infrastructure Services</h2><br><br>
+                    <div class="flex justify-between">
+                        <p class="text-[#00FF84]">19,062 ratings</p>
+                        <p class="text-[#FFCB45]">★★★★★ 4.8</p>
+                    </div><br><br>
+                    <div class="flex justify-between">
+                        <button class="px-6 py-3 rounded bg-[#F44335] ">Sign Up</button>
+                        <button class="px-6 py-3 rounded bg-white text-black">Next</button>
+                    </div> <br><br><br>
+                    <p class="text-sm pb-6 bottom-0 md:bottom-[-50%] relative">When you complete all of the courses in the program, you'll earn a Certificate to share with your professional network as well as unlock access to career support resources to help you kickstart your new career. </p>
+                </div>
+                <div class="col-span-12 md:col-span-9 bg-white text-black px-12 dark:bg-gray-900 dark:text-white">
+                    <h3 class="mt-8 text-xl text-[#F9CCC7] font-semibold">About this course</h3><br>
+                    <p>This course will transition you from working on a single computer to an entire fleet. Systems administration is the field of IT that’s responsible for maintaining reliable computers systems in a multi-user environment. In this course, you’ll learn about the infrastructure services that keep all organizations, big and small, up and running. We’ll deep dive on cloud so that you’ll understand everything from typical cloud infrastructure setups to how to manage cloud resources. You'll also learn how to manage and configure servers and how to use industry tools to manage computers, user information, and user productivity. Finally, you’ll learn how to recover your organization’s IT infrastructure in the event of a disaster.</h3><br><br><br>
+                    <h3 class="text-xl text-[#F9CCC7] font-semibold">What you will learn </h3><br>
+                    <div class="flex items-center gap-4">
+                        <button class="bg-[#F9CCC7] text-[#F44335] px-5 py-3 text-xl rounded-full">✔</button>
+                        <p>Utilize best practices for choosing hardware, vendors, and services for your organization</p>
+                    </div><br>
+                    <div class="flex items-center gap-4">
+                        <button class="bg-[#F9CCC7] text-[#F44335] px-5 py-3 text-xl rounded-full">✔</button>
+                        <p>Understand how the most common infrastructure services that keep an organization running work, and how to manage infrastructure servers</p>
+                    </div><br>
+                    <div class="flex items-center gap-4">
+                        <button class="bg-[#F9CCC7] text-[#F44335] px-5 py-3 text-xl rounded-full">✔</button>
+                        <p>Understand how to make the most of the cloud for your organization</p>
+                    </div><br>
+                    <div class="flex items-center gap-4">
+                        <button class="bg-[#F9CCC7] text-[#F44335] px-5 py-3 text-xl rounded-full">✔</button>
+                        <p>Manage an organization’s computers and users using the directory services , Active Directory, and OpenLDAP</p>
+                    </div><br>
+                    <div class="flex items-center gap-4">
+                        <button class="bg-[#F9CCC7] text-[#F44335] px-5 py-3 text-xl rounded-full">✔</button>
+                        <p>Choose and install an operating system on a computer</p>
+                    </div><br>
+                    <div class="flex items-center gap-4">
+                        <button class="bg-[#F9CCC7] text-[#F44335] px-5 py-3 text-xl rounded-full">✔</button>
+                        <p>Backup your organization’s data and know how to recover your IT infrastructure in  the case of  a disaster</p>
+                    </div><br>
+                    <div class="flex items-center gap-4">
+                        <button class="bg-[#F9CCC7] text-[#F44335] px-5 py-3 text-xl rounded-full">✔</button>
+                        <p>Utilize systems administration knowledge to plan and improve processes for IT environments</p>
+                    </div><br><br>
+                    <h3 class="mt-8 text-xl text-[#F9CCC7] font-semibold">Skills you will gain </h3><br>
+                    <div class=" grid md:flex gap-6">
+                        <button class="px-6 py-3 border border-[#F44335] rounded-full hover:bg-[#F44335] hover:text-white transition duration-300">Directory Service</button>
+                        <button class="px-6 py-3 border border-[#F44335] rounded-full hover:bg-[#F44335] hover:text-white transition duration-300">Lightweight Directory Access Protocol (LDAP)</button>
+                        <button class="px-6 py-3 border border-[#F44335] rounded-full hover:bg-[#F44335] hover:text-white transition duration-300">Backup</button>
+                    </div><br><br>
+                    <h3 class="mt-8 text-xl text-[#F9CCC7] font-semibold">Information </h3><br>
+                    <div>
+                        <ul class="list-disc pb-6">
+                            <li><p class="ms-4">Flexible deadlines</p></li>
+                            <li><p class="ms-4">Shareable Certificate </p></li>
+                            <li><p class="ms-4">100% online</p></li>
+                            <li><p class="ms-4">Beginner Level</p></li>
+                            <li><p class="ms-4">Approx. 25 hours to complete</p></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+
+            <div class="container  grid-cols-12 mx-auto">
+                <img src="images/Connector Vector (3).png" alt="" class=" object-fill w-96 md:w-auto md:ms-48 container">
+            </div>
+
+
+                         <!--Course 5  section-->
+
+
+
+                         <section class="grid grid-cols-12 container mx-auto mt-6 shadow-lg">
+                            <div class="col-span-12 md:col-span-3 bg-[#2D3142] text-white px-12">
+                                <p class="text-[#00FF84] mt-8">Course 5 </p> <br>
+                                <h2 class="text-4xl font-semibold">IT Security: Defense against the digital dark arts</h2><br><br>
+                                <div class="flex justify-between">
+                                    <p class="text-[#00FF84]">16,121 ratings</p>
+                                    <p class="text-[#FFCB45]">★★★★★ 4.8</p>
+                                </div><br><br>
+                                <div class="flex justify-between">
+                                    <button class="px-6 py-3 rounded bg-[#F44335] ">Sign Up</button>
+                                    <button class="px-6 py-3 rounded bg-white text-black">Next</button>
+                                </div> <br><br><br>
+                                <p class="text-sm pb-6 bottom-0 md:bottom-[-48%] relative">When you complete all of the courses in the program, you'll earn a Certificate to share with your professional network as well as unlock access to career support resources to help you kickstart your new career. </p>
+                            </div>
+                            <div class="col-span-12 md:col-span-9 bg-white text-black px-12 dark:bg-gray-900 dark:text-white">
+                                <h3 class="mt-8 text-xl text-[#F9CCC7] font-semibold">About this course</h3><br>
+                                <p>This course covers a wide variety of IT security concepts, tools, and best practices. It introduces threats and attacks and the many ways they can show up. We’ll give you some background of encryption algorithms and how they’re used to safeguard data. Then, we’ll dive into the three As of information security: authentication, authorization, and accounting. We’ll also cover network security solutions, ranging from firewalls to Wifi encryption options. The course is rounded out by putting all these elements together into a multi-layered, in-depth security architecture, followed by recommendations on how to integrate a culture of security into your organization or team.</h3><br><br><br>
+                                <h3 class="text-xl text-[#F9CCC7] font-semibold">What you will learn </h3><br>
+                                <div class="flex items-center gap-4">
+                                    <button class="bg-[#F9CCC7] text-[#F44335] px-5 py-3 text-xl rounded-full">✔</button>
+                                    <p>How various encryption algorithms and techniques work as well as their benefits and limitations</p>
+                                </div><br>
+                                <div class="flex items-center gap-4">
+                                    <button class="bg-[#F9CCC7] text-[#F44335] px-5 py-3 text-xl rounded-full">✔</button>
+                                    <p>Various authentication systems and types</p>
+                                </div><br>
+                                <div class="flex items-center gap-4">
+                                    <button class="bg-[#F9CCC7] text-[#F44335] px-5 py-3 text-xl rounded-full">✔</button>
+                                    <p>The difference between authentication and authorization</p>
+                                </div><br>
+                                <div class="flex items-center gap-4">
+                                    <button class="bg-[#F9CCC7] text-[#F44335] px-5 py-3 text-xl rounded-full">✔</button>
+                                    <p>How to evaluate potential risks and recommend ways to reduce risk</p>
+                                </div><br>
+                                <div class="flex items-center gap-4">
+                                    <button class="bg-[#F9CCC7] text-[#F44335] px-5 py-3 text-xl rounded-full">✔</button>
+                                    <p>Best practices for securing a network</p>
+                                </div><br>
+                                <div class="flex items-center gap-4">
+                                    <button class="bg-[#F9CCC7] text-[#F44335] px-5 py-3 text-xl rounded-full">✔</button>
+                                    <p>How to help others to grasp security concepts and protect themselves/p>
+                                </div><br><br>
+                                <h3 class="mt-8 text-xl text-[#F9CCC7] font-semibold">Skills you will gain </h3><br>
+                                <div class=" grid md:flex gap-6">
+                                    <button class="px-6 py-3 border border-[#F44335] rounded-full hover:bg-[#F44335] hover:text-white transition duration-300">Cybersecurity</button>
+                                    <button class="px-6 py-3 border border-[#F44335] rounded-full hover:bg-[#F44335] hover:text-white transition duration-300">Wireless Security    </button>
+                                    <button class="px-6 py-3 border border-[#F44335] rounded-full hover:bg-[#F44335] hover:text-white transition duration-300">Cryptography</button>
+                                    <button class="px-6 py-3 border border-[#F44335] rounded-full hover:bg-[#F44335] hover:text-white transition duration-300">Network Security</button>
+                                </div><br><br>
+                                <h3 class="mt-8 text-xl text-[#F9CCC7] font-semibold">Information </h3><br>
+                                <div>
+                                    <ul class="list-disc pb-6">
+                                        <li><p class="ms-4">Flexible deadlines</p></li>
+                                        <li><p class="ms-4">Shareable Certificate </p></li>
+                                        <li><p class="ms-4">100% online</p></li>
+                                        <li><p class="ms-4">Beginner Level</p></li>
+                                        <li><p class="ms-4">Approx. 25 hours to complete</p></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>
+
+
+    <!--BG-image  section-->
+
+<section class=" mt-60 flex bg-[url('images/people.png')] h-[557px] bg-cover bg-no-repeat">
+    <div class="container w-[590px] h-[435px] bg-white md:ml-40 md:mt-20 mx-auto mt-16 px-10 py-14 rounded-2xl dark:bg-gray-900 dark:text-white">
+        <div class="container">
+            <img src="images/sign.png" alt=""><br><br>
+            <h1 class="text-2xl font-semibold">I worked in retail and needed to make a change. The certificate is really designed for you to go at your own pace. This is something that anybody can do</h1><br><br>
+            <h2 class="text-lg text-[#F9CCC7]">Daniel, IT Support Specialist at Central Community College and Google IT Support Certificate graduate</h2>
+        </div>
+    </div>
+</section>
+
+
+    <!--Foter  section-->
+
+
+    <footer class="container mx-auto md:mx-auto mt-20 py-20 dark:bg-gray-900 dark:text-white">
+        <div class="grid grid-cols-12 container md:mx-auto ms-36 ">
+            <div class="col-span-12 md:col-span-4 ">
+                <img src="images/logo.png" alt="" class="object-cover cursor-pointer mb-4">
+                <address class="text-[#20484F] space-y-2  dark:text-white">
+                    Level39 <br>
+                    One Canada Square,<br>
+                    Canary Wharf, <br>
+                    London,<br>
+                    E14 5AB<br>
+                </address>
+            </div>
+            <div class="md:flex grid justify-between col-span-8 items-center ">
+                <div>
+                    <h3 class="text-lg font-semibold md:mb-4 mt-8">Home</h3>
+                <ul class="space-y-2 ">
+                    <li class="list dark:text-white">Collaborations</li>
+                    <li class="list dark:text-white">Statistics</li>
+                    <li class="list dark:text-white">How It Works </li>
+                    <li class="list dark:text-white dark:text-white">Testimonials </li>
+                </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold md:mb-4 mt-8">About Us</h3>
+                <ul class="space-y-2">
+                    <li class="list dark:text-white">Who We Are</li>
+                    <li class="list dark:text-white">Mission statement </li>
+                    <li class="list dark:text-white">Our Vision </li>
+                    <li class="list dark:text-white">The Team </li>
+                </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold md:mb-4 mt-8">Upskill</h3>
+                <ul class="space-y-2">
+                    <li class="list dark:text-white">It Support </li>
+                    <li class="list dark:text-white">Project Managment </li>
+                    <li class="list dark:text-white">Data Analysts</li>
+                    <li class="list dark:text-white">Ux Design </li>
+                </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold md:mb-4 mt-8">Contact Us </h3>
+                <ul class="space-y-2">
+                    <li class="list dark:text-white">Your message </li>
+                    <li class="list dark:text-white">Email</li>
+                    <li class="list dark:text-white">Phone number </li>
+                    <li class="list dark:text-white">Linkedin</li>
+                </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+
+        let list = document.querySelector('.nav-links')
+        const htmlTag = document.getElementById("htmlTag");
+        document.getElementById("switch").addEventListener("click", function () {
+            htmlTag.classList.toggle("dark");
+        })
+        function Menu(e){
+            e.name === 'menu-outline' ? e.name = 'close' : e.name = 'menu-outline'
+            list.classList.toggle('top-[11%]')
+        }
+    </script>
+</body>
+</html>
